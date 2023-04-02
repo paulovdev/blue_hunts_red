@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 2px 1px #666666;
+}
+
+main {
+    position: relative;
+    width: 470px;
+    height: 470px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.096);
+    cursor: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: 0.2s;
+}
+
+#player1 {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+
+    background-color: rgb(0, 204, 255);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: 0.3s;
+}
+
+.player2 {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+
+    background-color: rgb(255, 0, 0);
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: 0.3s;
+
+}
+
+.player2.active {
+    border-radius: 45%;
+    width: 60px;
+    height: 60px;
+}
+
+.menu {
+    position: relative;
+    width: 470px;
+    height: 470px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.096);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: 0.2s;
+}
+
+span p:nth-child(1) {
+    color: rgb(0, 204, 255);
+}
+
+span p:nth-child(2) {
+    color: rgb(0, 0, 0);
+}
+
+span p:nth-child(3) {
+    color: red;
+}
+
+p {
+    padding: 10px;
+    outline: none;
+    border-radius: 6px;
+    font-size: 2em;
+    user-select: none;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    padding: 5px;
+    color: #979595;
+    font-size: 1.8em;
+    outline: none;
+    border-radius: 6px;
+
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.3s;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+h1:hover {
+    background-color: #000000ef;
+    color: #ffffff;
+}
+
+h2 {
+    padding: 10px;
+    color: rgb(163, 167, 167);
+    font-size: 16px;
+    user-select: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+.reveal {
+    position: relative;
+    top: -400px;
+    transform: translateY(400px);
+    opacity: 1;
+    transition: height cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 1s ease-in;
+}
+
+.time {
+    padding: 5px;
+    color: #292828;
+    font-size: 1.8em;
+    outline: none;
+    border-radius: 6px;
+
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.3s;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+
+footer {
+    position: fixed;
+    padding: 20px 200px;
+    background-color: #000000f1;
+    color: #fff;
+    border-radius: 6px;
+    user-select: none;
+}
+
+
+
+
+/*DARK MENU*/
+body.dark {
+    width: 100vw;
+    height: 100vh;
+    background-color: #292929;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.time.dark {
+    color: #ffffff;
+
+}
+
+.checkbox-wrapper-20 {
+    position: relative;
+    bottom: 20px;
+    --slider-height: 8px;
+    --slider-width: calc(var(--slider-height) * 4);
+    --switch-height: calc(var(--slider-height) * 3);
+    --switch-width: var(--switch-height);
+    --switch-shift: var(--slider-height);
+    --transition: all 0.2s ease;
+
+    --switch-on-color: #b3acaf;
+    --slider-on-color: #464244;
+
+    --switch-off-color: #eeeeee;
+    --slider-off-color: #c5c5c5;
+}
+
+.checkbox-wrapper-20 .switch {
+    display: block;
+
+}
+
+.checkbox-wrapper-20 .switch .slider {
+    position: relative;
+    display: inline-block;
+    height: var(--slider-height);
+    width: var(--slider-width);
+    border-radius: var(--slider-height);
+    cursor: pointer;
+    background: var(--slider-off-color);
+    transition: var(--transition);
+}
+
+.checkbox-wrapper-20 .switch .slider:after {
+    background: var(--switch-off-color);
+    position: absolute;
+    left: calc(-1 * var(--switch-shift));
+    top: calc((var(--slider-height) - var(--switch-height)) / 2);
+    display: block;
+    width: var(--switch-height);
+    height: var(--switch-width);
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
+    content: '';
+    transition: var(--transition);
+}
+
+.checkbox-wrapper-20 .switch label {
+    margin-right: 7px;
+}
+
+.checkbox-wrapper-20 .switch .input {
+    display: none;
+}
+
+.checkbox-wrapper-20 .switch .input~.label {
+    margin-left: var(--slider-height);
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider:after {
+    left: calc(var(--slider-width) - var(--switch-width) + var(--switch-shift));
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider {
+    background: var(--slider-on-color);
+}
+
+.checkbox-wrapper-20 .switch .input:checked~.slider:after {
+    background: var(--switch-on-color);
+}
+
+.shoot {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+
+
+    background-color: rgb(0, 0, 0);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.2s;
+}
+
+.shoot2 {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: 0.2s;
+}
